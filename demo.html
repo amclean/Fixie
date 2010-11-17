@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+  <title>Demo</title>
+  <style type="text/css" media="screen,print">
+    /*-- -- -- -- -- -- --
+      Undo browser defaults
+      http://tantek.com/log/2004/09.html#d06t2354
+    -- -- -- -- -- -- --*/
+    body{ 
+      font-size:10px;
+      line-height:15px;
+      font-family:Arial,Helvetica,sans-serif;
+      margin:0; padding:0;
+    }
+    :link,:visited {text-decoration: none;}
+     ul, ol {list-style: none;}
+     h1, h2, h3, h4, h5, h6, pre, code, p {font-size: 1em;}
+     ul, ol, dl,li, dt, dd, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, fieldset, input {margin: 0; padding: 0;}
+     a img,:link img,:visited img {border: none;}
+     address {font-style: normal;}
+     .clearfix:after {
+         content: ".";
+         display: block;
+         height: 0;
+         clear: both;
+         visibility: hidden;
+     }
+
+     .clearfix {display: inline-block;}
+
+     /* Hides from IE-mac \*/
+     * html .clearfix {height: 1%;}
+     .clearfix {display: block;}
+     /* End hide from IE-mac */
+     
+    #container{
+      width:970px;
+      border:1px solid #666;
+      margin: 15px auto 0;
+      position:relative;    
+    }
+    #header{
+      height:80px;
+      background:#bbb;
+      clear:left;   
+      margin-bottom:10px;    
+    }
+    #content{
+      position:relative;    
+      clear:left;  
+      top:0;
+    }
+    #footer{
+      height:80px;
+      background:#bbb;
+    }  
+    #sidebar-left{
+      position:absolute;
+      top:0;
+      left:10px;
+      width:170px;
+      height:200px;
+      background:#004276;        
+    } 
+    #sidebar-right{
+      position:absolute;
+      right:10px;
+      top:0;      
+      width:170px;      
+      height:200px;  
+      background:#004276;                  
+    }
+    #mainBar{
+      margin: 10px auto;
+      width:580px;            
+      height:800px;
+      background:#ccc;
+    }         
+  </style>
+</head>
+
+<body>
+  
+<div id="container">
+  <div id="header"></div>
+  <div id="content" class="clearfix">
+    <div id="sidebar-left"></div>
+    <div id="mainBar"></div>        
+    <div id="sidebar-right"></div>        
+  </div>      
+  <div id="footer"></div>      
+</div>
+
+<script src="javascripts/jquery-1.4.4.min.js" type="text/javascript" charset="utf-8"></script>    
+<script src="javascripts/underscore-min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8">
+  var FixieLeft   = new fixie('#sidebar-left','#content','top');
+  var FixieRight  = new fixie('#sidebar-right','#content','top');
+</script>
+
+</body>
+</html>
