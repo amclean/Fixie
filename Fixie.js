@@ -128,12 +128,9 @@ fixie.prototype.stopMonitoringScroll  = function(){
 // update offset coordinates if necessary
 fixie.prototype.checkForLayoutChanges = function(){
   var offset = this.getOffset();
-    console.log(this.offset,offset)
   if(this.offset !== offset){
     this.offset = offset;
 		this.position();
-    // this.setOriginalPosition();
-    // this.setOriginalOffset();          
   }
 };      
 // monitor layout changes that affect position
