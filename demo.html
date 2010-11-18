@@ -66,6 +66,7 @@
       width:170px;
       height:200px;
       background:#004276;        
+      color:#fff;
     } 
     #sidebar-right{
       position:absolute;
@@ -74,6 +75,7 @@
       width:170px;      
       height:200px;  
       background:#004276;                  
+      color:#fff;      
     }
     #mainBar{
       margin: 10px auto;
@@ -89,15 +91,16 @@
 <div id="container">
   <div id="header"></div>
   <div id="content" class="clearfix">
-    <div id="sidebar-left"></div>
+    <div id="sidebar-left">left</div>
     <div id="mainBar"></div>        
-    <div id="sidebar-right"></div>        
+    <div id="sidebar-right">right</div>        
   </div>      
   <div id="footer"></div>      
 </div>
 
-<script src="javascripts/jquery-1.4.4.min.js" type="text/javascript" charset="utf-8"></script>    
-<script src="javascripts/underscore-min.js" type="text/javascript" charset="utf-8"></script>
+<script src="jquery-1.4.4.min.js" type="text/javascript" charset="utf-8"></script>    
+<script src="underscore-min.js" type="text/javascript" charset="utf-8"></script>
+<script src="Fixie.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
   var FixieLeft   = new fixie('#sidebar-left','#content','top');
   var FixieRight  = new fixie('#sidebar-right','#content','top');
