@@ -22,7 +22,9 @@ var fixie = function(target,parent, positionProfile, overrides){
   this.setOriginalOffset();
   
   // override base values
-  _.extend(this, overrides);
+	for(var key in overrides){
+		this[key] = overrides[key];
+	}
   this.relativeTo       = jQuery(this.relativeTo);
   this.positionProfile  = positionProfile;                
   
@@ -61,7 +63,6 @@ fixie.prototype.getOffset = function(target){
   }else if(this.axis === 'x'){
     offset = jQuery(this.parent).offset().left;          
   }
-  
   return offset;
 };
 
@@ -127,11 +128,12 @@ fixie.prototype.stopMonitoringScroll  = function(){
 // update offset coordinates if necessary
 fixie.prototype.checkForLayoutChanges = function(){
   var offset = this.getOffset();
+    console.log(this.offset,offset)
   if(this.offset !== offset){
-    console.log('changed')
     this.offset = offset;
-    this.setOriginalPosition();
-    this.setOriginalOffset();          
+		this.position();
+    // this.setOriginalPosition();
+    // this.setOriginalOffset();          
   }
 };      
 // monitor layout changes that affect position
