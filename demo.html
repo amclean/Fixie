@@ -64,7 +64,7 @@
       top:0;
       left:10px;
       width:170px;
-      height:200px;
+      height:400px;
       background:#004276;        
       color:#fff;
     } 
@@ -73,7 +73,7 @@
       right:10px;
       top:0;      
       width:170px;      
-      height:200px;  
+      height:400px;  
       background:#004276;                  
       color:#fff;      
     }
@@ -98,12 +98,11 @@
   <div id="footer"></div>      
 </div>
 
-<script src="jquery-1.4.4.min.js" type="text/javascript" charset="utf-8"></script>    
-<script src="underscore-min.js" type="text/javascript" charset="utf-8"></script>
-<script src="Fixie.js" type="text/javascript" charset="utf-8"></script>
+<script src="jquery-1.6.1.js" type="text/javascript" charset="utf-8"></script>    
+<script src="fixie-new.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
-  var FixieLeft   = new fixie('#sidebar-left','#content','top');
-  var FixieRight  = new fixie('#sidebar-right','#content','top');
+	$('#sidebar-left').fixie();
+	$('#sidebar-right').fixie({ constrain: false });
 </script>
 
 </body>
