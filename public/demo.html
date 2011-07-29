@@ -41,12 +41,12 @@
     #container{
       width:970px;
       border:1px solid #666;
-      margin: 15px auto 0;
+      margin: 15px auto 800px;
       position:relative;    
     }
     #header{
       height:80px;
-      background:#bbb;
+      background:#000;
       clear:left;   
       margin-bottom:10px;    
     }
@@ -54,6 +54,7 @@
       position:relative;    
       clear:left;  
       top:0;
+			background:#f00;
     }
     #footer{
       height:80px;
@@ -64,7 +65,7 @@
       top:0;
       left:10px;
       width:170px;
-      height:400px;
+      height:900px;
       background:#004276;        
       color:#fff;
     } 
@@ -80,7 +81,7 @@
     #mainBar{
       margin: 10px auto;
       width:580px;            
-      height:800px;
+      height:1800px;
       background:#ccc;
     }         
   </style>
@@ -91,19 +92,17 @@
 <div id="container">
   <div id="header"></div>
   <div id="content" class="clearfix">
-    <div id="sidebar-left">left</div>
     <div id="mainBar"></div>        
-    <div id="sidebar-right">right</div>        
+		<div id="sidebar-right">right</div>        
+		<div id="sidebar-left">left</div>
   </div>      
+
   <div id="footer"></div>      
 </div>
-
-<script src="assets/fixie-min.js" type="text/javascript" charset="utf-8"></script>
+<script src="javascripts/jquery-1.6.1.js" type="text/javascript" charset="utf-8"></script>
+<script src="javascripts/Fixie.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
-$('#sidebar-left').fixie();
-$('#sidebar-right').fixie({ constrain: false });
-
+	var sidebar = $('#sidebar-left').fixie();
 </script>
-
 </body>
 </html>
